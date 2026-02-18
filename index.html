@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TIC TAC TOE // MUMIN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+
+  <!-- CURSOR (desktop only) -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- CORNER BRACKETS -->
+  <div class="bracket bracket-tl"></div>
+  <div class="bracket bracket-tr"></div>
+  <div class="bracket bracket-bl"></div>
+  <div class="bracket bracket-br"></div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <a href="index.html" class="top-bar-logo">MU<span>.</span>MIN</a>
+    <div class="top-bar-center">MODULE :: TIC_TAC_TOE</div>
+    <div class="top-bar-right">
+      <div class="status-dot"></div>
+      <span id="sysTime">00:00:00</span>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="wrapper">
+
+    <div class="header">
+      <div class="header-tag">UNIT GAME v1.0</div>
+      <div class="header-title">TIC <span>X</span> TAC <span>O</span> TOE</div>
+    </div>
+
+    <div class="scoreboard">
+      <div class="score-box active-score" id="scoreX">
+        <div class="score-label">PLAYER X</div>
+        <div class="score-num" id="numX">0</div>
+      </div>
+      <div class="score-divider"></div>
+      <div class="score-box" id="scoreDraw">
+        <div class="score-label">DRAW</div>
+        <div class="score-num" id="numDraw">0</div>
+      </div>
+      <div class="score-divider"></div>
+      <div class="score-box" id="scoreO">
+        <div class="score-label">PLAYER O</div>
+        <div class="score-num" id="numO">0</div>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <div class="status-indicator"></div>
+      <div class="status-text" id="statusText">
+        <span class="player-x">PLAYER X</span> — AWAITING INPUT
+      </div>
+    </div>
+
+    <div class="board-wrap" id="boardWrap">
+      <span class="bc1"></span>
+      <span class="bc2"></span>
+      <div class="board" id="board"></div>
+      <div class="result-overlay" id="resultOverlay">
+        <div class="result-tag" id="resultTag">MATCH COMPLETE</div>
+        <div class="result-title" id="resultTitle">PLAYER<span id="resultPlayer">X</span>WINS</div>
+        <div class="result-sub" id="resultSub">UNIT TERMINATED</div>
+        <div class="result-hint">TAP TO CONTINUE</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn btn-primary" onclick="newGame()"><span>New Round</span></button>
+      <button class="btn btn-secondary" onclick="resetGame()"><span>Reset All</span></button>
+    </div>
+
+  </div>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <div class="ticker-item">PLAYER X <span>■</span></div>
+      <div class="ticker-item">PLAYER O <span>■</span></div>
+      <div class="ticker-item">TIC TAC TOE <span>■</span></div>
+      <div class="ticker-item">UNIT GAME v1.0 <span>■</span></div>
+      <div class="ticker-item">MUMIN PORTFOLIO <span>■</span></div>
+      <div class="ticker-item">FRONTEND DEV <span>■</span></div>
+      <div class="ticker-item">PLAYER X <span>■</span></div>
+      <div class="ticker-item">PLAYER O <span>■</span></div>
+      <div class="ticker-item">TIC TAC TOE <span>■</span></div>
+      <div class="ticker-item">UNIT GAME v1.0 <span>■</span></div>
+      <div class="ticker-item">MUMIN PORTFOLIO <span>■</span></div>
+      <div class="ticker-item">FRONTEND DEV <span>■</span></div>
+    </div>
+  </div>
+ 
+</body>
+<script src="script.js"></script>
+</html>
